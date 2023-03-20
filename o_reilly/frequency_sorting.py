@@ -9,16 +9,8 @@
 # Examples:
 # assert list(frequency_sorting([1, 2, 3, 4, 5])) == [1, 2, 3, 4, 5]
 # assert list(frequency_sorting([3, 4, 11, 13, 11, 4, 4, 7, 3])) == [
-#     4,
-#     4,
-#     4,
-#     3,
-#     3,
-#     11,
-#     11,
-#     7,
-#     13,
-# ]
+#     4, 4, 4, 3, 3, 11, 11, 7, 13
+#     ]
 from typing import Iterable
 
 

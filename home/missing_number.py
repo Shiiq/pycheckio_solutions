@@ -6,16 +6,28 @@
 # Examples:
 # assert missing_number([1, 4, 2, 5]) == 3
 # assert missing_number([2, 6, 8]) == 4
-from functools import reduce
-DATA = [1, 4, 2, 5]
-# [1, 2, 4, 5]
-DATA.sort()
-DATA.reverse()
-# min_dif = ([(DATA[i] - DATA[i+1]) for i in range(len(DATA)-1)])
-for i in range(len(DATA)-1):
-    d = DATA[i+1] - DATA[i]
+# assert missing_number([2, 4, 6, 10]) == 8
 
+def missing_number(items: list[int]) -> int:
+    items.sort()
+    l = len(items) - 1
+    dif = items[1] - items[0]
+    for i in range(l):
+        cur = items[i]
+        nxt = items[i + 1]
+        cur_dif = nxt - cur
+        if dif > cur_dif:
+            dif = cur_dif
+    start = items[0]
+    last = items[l]
+    from_start = [i for i in range(start, last + dif, dif)]
+    dig = sum(from_start) - sum(items)
+    return dig
 
+print("Example:")
+print(missing_number([1, 4, 2, 5]))
 
-# def missing_number(items: list[int]) -> int:
-    # return 0
+assert missing_number([1, 4, 2, 5]) == 3
+assert missing_number([2, 6, 8]) == 4
+
+print("The mission is done! Click 'Check Solution' to earn rewards!")
