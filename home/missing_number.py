@@ -31,3 +31,15 @@ assert missing_number([1, 4, 2, 5]) == 3
 assert missing_number([2, 6, 8]) == 4
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")
+
+# разобрать решение
+# def missing_number(items: list[int]) -> int:
+#     i = 0
+#     while True:
+#         test = [x for x in items]
+#         test.append(i)
+#         test.sort()
+#         diffs = [test[x+1]-test[x] for x in range(len(test)-1)]
+#         if len(set(diffs)) == 1:
+#             return i
+#         i += 1
