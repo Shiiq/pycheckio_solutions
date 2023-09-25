@@ -10,6 +10,7 @@ from functools import wraps
 from time import perf_counter
 from random import randint
 
+
 def get_sizeof_arr(size):
      arr = [[randint(0, 1) for _ in range(size)] for _ in range(size)]
      return arr
@@ -21,7 +22,7 @@ def exec_time(f):
         start = perf_counter()
         res = f(array)
         total_time = perf_counter() - start
-        print(f.__name__, res, "total time is ", total_time)
+        print(f.__name__, res, "total time is", total_time)
         return res
     return wrapper
 
