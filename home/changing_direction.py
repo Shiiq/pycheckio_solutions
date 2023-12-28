@@ -1,4 +1,4 @@
-# speedy solution
+# speedy solution from pycheckio archive
 # from itertools import pairwise
 # def changing_direction(e: list) -> int:
 #     return sum(x*y<0 for x,y in pairwise(x-y for x,y in pairwise(e) if x!=y))
