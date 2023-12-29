@@ -58,4 +58,3 @@ print(list(follow("fflff")))
 assert list(follow("fflff")) == [-1, 4]
 assert list(follow("ffrff")) == [1, 4]
 assert list(follow("fblr")) == [0, 0]
-
