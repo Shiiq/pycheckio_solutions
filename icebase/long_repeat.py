@@ -13,9 +13,6 @@
 # The last substring is the longest one, which makes it the answer.
 
 def long_repeat(line: str) -> int:
-    """
-    length the longest substring that consists of the same char
-    """
     if not line:
         return 0
     if len(line) == 1:
@@ -30,6 +27,7 @@ def long_repeat(line: str) -> int:
             counts.append(cur_count)
             cur_count = 1
         cur_char = char
+    counts.append(cur_count)
     return max(counts)
 
 
@@ -38,5 +36,6 @@ print(long_repeat("sdsffffse"))
 
 assert long_repeat("sdsffffse") == 4
 assert long_repeat("ddvvrwwwrggg") == 3
+assert long_repeat("aa") == 2
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")

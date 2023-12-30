@@ -16,7 +16,7 @@ def final_stone(stones: list[int]) -> int:
     if cursor == 1:
         return 1
     stones.sort()
-    while cursor > 2 :
+    while cursor > 2:
         max_1 = stones.pop()
         max_2 = stones.pop()
         dif = abs(max_1 - max_2)
@@ -28,7 +28,7 @@ def final_stone(stones: list[int]) -> int:
 
 
 print('Example:')
-print(final_stone([1,2,3]))
+print(final_stone([1, 2, 3]))
 
 assert final_stone([3, 5, 1, 1, 9]) == 1
 assert final_stone([1, 2, 3]) == 0

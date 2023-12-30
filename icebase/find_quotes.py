@@ -4,7 +4,7 @@
 # You need to return an Iterable consisting of the texts inside the quotation marks.
 # But choose only quotes with double quotation marks (").
 # Single quotation marks (') aren’t appropriate.
-import re
+
 
 # dummy code
 def find_quotes(a):
@@ -27,8 +27,10 @@ def find_quotes(a):
             word += char
     return res
 
-# using re
+
+# using regular expressions
 # def find_quotes(a):
+# import re
 #     pattern = r'".*?"'
 #     matches = re.findall(pattern, a)
 #     print(matches)
