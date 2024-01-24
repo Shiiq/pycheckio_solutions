@@ -14,7 +14,7 @@ def checkio(game_result: list[str]) -> str:
     row_size = len(game_result)
     col_size = len(game_result[0])
     if row_size != col_size:
-        print("The field must a square")
+        print("The field must a be square")
     WIN_CASES = [row_size * "X",
                  row_size * "O"]
     to_rows = game_result
